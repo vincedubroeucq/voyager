@@ -1,0 +1,133 @@
+.has-grey-1-color {
+    color: $grey-1;
+}
+.has-grey-2-color {
+    color: $grey-2;
+}
+.has-grey-3-color {
+    color: $grey-3;
+}
+.has-grey-4-color {
+    color: $grey-4;
+}
+.has-grey-5-color {
+    color: $grey-5;
+}
+.has-grey-1-background-color {
+    background-color: $grey-1;
+}
+.has-grey-2-background-color {
+    background-color: $grey-2;
+}
+.has-grey-3-background-color {
+    background-color: $grey-3;
+}
+.has-grey-4-background-color {
+    background-color: $grey-4;
+}
+.has-grey-5-background-color {
+    background-color: $grey-5;
+}
+.has-orange-1-color {
+    color: $orange-1;
+}
+.has-orange-2-color {
+    color: $orange-2;
+}
+.has-orange-3-color {
+    color: $orange-3;
+}
+.has-orange-4-color {
+    color: $orange-4;
+}
+.has-orange-5-color {
+    color: $orange-5;
+}
+.has-orange-1-background-color {
+    background-color: $orange-1;
+}
+.has-orange-2-background-color {
+    background-color: $orange-2;
+}
+.has-orange-3-background-color {
+    background-color: $orange-3;
+}
+.has-orange-4-background-color {
+    background-color: $orange-4;
+}
+.has-orange-5-background-color {
+    background-color: $orange-5;
+}
+.has-background {
+    padding: $sp-4;
+}
+.has-transparent-to-grey-5-gradient-background {
+    background-image: linear-gradient( to bottom, transparent 50%, $grey-5 );
+}
+.has-txt-2-font-size {
+    font-size: $txt-2;
+}
+.has-txt-4-font-size {
+    font-size: $txt-4;
+}
+.has-txt-6-font-size {
+    font-size: $txt-6;
+}
+.has-txt-7-font-size {
+    font-size: $txt-7;
+}
+
+.wp-block-cover {
+    color: #fff;
+    width: auto;
+}
+
+.wp-block-gallery {
+    margin-bottom: $sp-5;
+    margin-top: $sp-5;
+}
+
+.wp-block-media-text .wp-block-media-text__content{
+    padding: $sp-4;
+}
+
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+	padding: $sp-5;
+}
+
+.wp-block-pullquote {
+    blockquote {
+        border: none;
+        p{
+            font-size: 1.75em;
+        }
+        cite {
+            text-align: inherit;
+        }
+    }
+    &.has-text-align-right,
+    &.has-text-align-left {
+        max-width: 100%;
+    }
+}
+
+.wp-block-separator.is-style-wide {
+    border-bottom-width: 4px;
+}
+.wp-block-separator.is-style-dots:before {
+    font-size: $txt-8;
+}
+
+.wp-block-table.is-style-stripes {
+    table {
+        border: none;
+    }
+    tbody tr:nth-child(odd) {
+        background-color: var(--theme-color-text-lightest);
+    } 
+}
+
+pre.wp-block-verse {
+	font-family: var(--theme-font-family, $font-sans);
+    line-height: var(--theme-line-height-medium);
+}

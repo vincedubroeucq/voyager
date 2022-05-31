@@ -1,0 +1,52 @@
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+    label {
+        display: block;
+    }
+}
+
+.comment-form-cookies-consent {
+    align-items: center;
+    display: flex;
+    input {
+        margin-right: $sp-1;
+    }
+}
+
+.comment-content {
+    flex: 1 0 200px;
+}
+
+.comment {
+    .avatar {
+        float: left;
+        border-radius: 50%;
+    }
+    .comment-content:after {
+        clear: both;
+    }
+    .children {
+        padding-left: $sp-5;
+        list-style: none;
+    }
+}
+
+.bypostauthor {
+    .avatar {
+        border: 2px solid $orange-5; 
+    }
+}
+
+.comment-reply-title {
+    display: flex;
+    flex-wrap: wrap;
+    small {
+        margin-left: auto
+    }
+}
+
+.logged-in-as {
+	font-size: var(--theme-font-size-small, $txt-3);
+}

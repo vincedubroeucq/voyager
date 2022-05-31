@@ -1,0 +1,19 @@
+/**
+ * Styles for the editor.
+ * Imports base HTML, typography and blocks styles
+ */
+@import 'variables';
+@import 'mixins';
+
+.wp-block {
+    max-width: $mlg;
+}
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+
+@import 'base';
+@import 'blocks';

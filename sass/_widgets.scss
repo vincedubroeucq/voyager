@@ -1,0 +1,34 @@
+#block-10 {
+    grid-column: 1 / -1;
+}
+
+.gallery {
+	margin: $sp-5 0;
+	display: grid;
+	grid-gap: $sp-4;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+    img {
+        margin: auto;
+    }
+    figcaption {
+        margin-top: $sp-1;
+    }
+}
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9 {
+	.gallery-columns-#{$i} {
+        @media screen and (min-width: $sm){
+		    grid-template-columns: repeat( $i, 1fr);
+        }
+    }
+}
+
+.gallery-caption {
+	display: block;
+}

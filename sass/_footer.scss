@@ -1,0 +1,25 @@
+.site-footer {
+    background: rgba( $grey-5, .90 );
+}
+
+@media screen and (min-width: $md){
+    .site-info-wrapper {
+        display: flex;
+    }
+}
+
+.newsletter-form {
+    label {
+        flex-basis: 100%;
+    }
+    input {
+        flex: 1;
+    }
+}
+
+.widget-area-wrapper.grid {
+    grid-gap: $sp-4;
+    @media screen and (min-width: $md){
+        grid-template-columns: repeat( auto-fill, minmax( 385px, 1fr ) );
+    }
+}

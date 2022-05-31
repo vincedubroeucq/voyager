@@ -1,0 +1,73 @@
+$grey-5: #141412;
+$grey-4: #3b3b3b;
+$grey-3: #808080;
+$grey-2: #bfbfbf;
+$grey-1: #e0e0e0;
+$grey-0: #fafafa;
+
+$orange-5: #cc3d00;
+$orange-4: #e95b02;
+$orange-3: #ff7033;
+$orange-2: #ffa782;
+$orange-1: #ffdbcc;
+$orange-0: #fff4f0;
+
+$xs:  375px;
+$sm:  576px;
+$md:  640px;
+$mlg: 768px;
+$lg:  1024px;
+$xl:  1280px;
+$xxl: 1600px;
+
+$txt-1:  .625rem;  // 10px
+$txt-2:  .75rem;   // 12px
+$txt-3:  .875rem;  // 14px
+$txt-4:  1rem;     // 16px
+$txt-5:  1.125rem; // 18px
+$txt-6:  1.25rem;  // 20px
+$txt-7:  1.625rem; // 26px
+$txt-8:  1.875rem; // 30px
+$txt-9:  2.5rem;   // 40px
+$txt-10: 3rem;     // 48px
+
+$lh-1: 1;
+$lh-2: 1.2;
+$lh-3: 1.6;
+$lh-4: 1.75;
+$lh-5: 2;
+
+$fw-1: 100;
+$fw-2: 200;
+$fw-3: 300;
+$fw-4: 400;
+$fw-5: 500;
+$fw-6: 600;
+$fw-7: 700;
+$fw-8: 800;
+$fw-9: 900;
+
+$sp-1: .25rem;  // 4px 
+$sp-2: .5rem;   // 8px
+$sp-3: .75rem;  // 12px
+$sp-4: 1rem;    // 16px
+$sp-5: 1.5rem;  // 20px
+$sp-6: 2rem;    // 32px
+$sp-7: 3rem;    // 48px  
+$sp-8: 4rem;    // 64px
+$sp-9: 6rem;    // 96px
+
+$font-sans: 'Rubik', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif';
+$font-serif : 'Georgia', 'Cambria', 'Times New Roman', Times, serif;
+$font-mono: 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace';
+
+$greys: (grey-5: $grey-5, grey-4: $grey-4, grey-3: $grey-3, grey-2: $grey-2, grey-1: $grey-1, grey-0: $grey-0 );
+$oranges: (orange-5: $orange-5, orange-4: $orange-4, orange-3: $orange-3, orange-2: $orange-2, orange-1: $orange-1, orange-0: $orange-0 );
+
+$widths: (xs: $xs, sm:$sm, md: $md, mlg: $mlg, lg: $lg, xl: $xl, xxl: $xxl);
+$line-heights: (1: $lh-1, 2: $lh-2, 3: $lh-3, 4: $lh-4, 5: $lh-5);
+$text-sizes: (1: $txt-1, 2: $txt-2, 3: $txt-3, 4: $txt-4, 5: $txt-5, 6: $txt-6, 7: $txt-7, 8: $txt-8, 9: $txt-9, 10: $txt-10);
+$font-weights: (1: $fw-1, 2: $fw-2, 3: $fw-3, 4: $fw-4, 5: $fw-5, 6: $fw-6, 7: $fw-7, 8: $fw-8, 9: $fw-9 );
+$margins: (0: 0, 1: $sp-1, 2: $sp-2, 3: $sp-3, 4: $sp-4, 5: $sp-5, 6: $sp-6, 7: $sp-7, 8: $sp-8, 9: $sp-9, auto: auto);
+$paddings: (0: 0, 1: $sp-1, 2: $sp-2, 3: $sp-2, 4: $sp-4, 5: $sp-5, 6: $sp-6, 7: $sp-7, 8: $sp-8, 9: $sp-9);
+$breakpoints: (xs: $xs, sm: $sm, md: $md, mlg: $mlg, lg: $lg, xl: $xl, xxl: $xxl);

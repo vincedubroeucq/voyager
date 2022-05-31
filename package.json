@@ -1,0 +1,36 @@
+{
+  "name": "voyager",
+  "version": "1.0.0",
+  "description": "Theme used as an example for Développer son thème WordPress",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run sass:watch",
+    "build": "npm run css:build & npm run js:build & npm run make-pot",
+    "babel": "babel --presets=@babel/preset-env js/navigation.js -o js/navigation.min.js",
+    "babel:watch": "babel --watch --presets=@babel/preset-env js/navigation.js -o js/navigation.babel.js",
+    "sass:watch": "npm run style:watch & npm run editor-sass:watch & npm run woocommerce-sass:watch",
+    "style:watch": "sass --watch sass/style.scss:style.css",
+    "editor-sass:watch": "sass --watch sass/editor-style.scss:editor-style.css",
+    "woocommerce-sass:watch": "sass --watch sass/woocommerce.scss:woocommerce.css",
+    "style:build": "sass --style=compressed sass/style.scss:style.min.css",
+    "editor-style:build": "sass --style=compressed sass/editor-style.scss:editor-style.min.css",
+    "woocommerce-style:build": "sass --style=compressed sass/woocommerce.scss:woocommerce.min.css",
+    "postcss": "postcss style.css > style.postcss.min.css",
+    "terser": "terser js/navigation.min.js -o js/navigation.min.js",
+    "make-pot": "wp i18n make-pot . languages/voyager.pot",
+    "css:build": "npm run style:build & npm run editor-style:build & npm run woocommerce-style:build",
+    "js:build": "npm run babel && npm run terser",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vincent Dubroeucq",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "terser": "^5.12.1"
+  }
+}

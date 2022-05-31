@@ -1,0 +1,377 @@
+/*********************
+  Base properties 
+**********************/
+:root {
+    --theme-color-text-darkest: #{$grey-5};
+    --theme-color-text: #{$grey-4};
+    --theme-color-text-light: #{$grey-3};
+    --theme-color-text-lightest: #{$grey-1};
+    --theme-color-accent: #{$orange-5};
+    --theme-color-accent--lighter: #{$orange-3};
+    --theme-color-accent--lightest: #{$orange-1};
+    --theme-color-link: #{$orange-5};
+    --theme-color-link-hover: #{$orange-3};
+    --theme-font-family: #{$font-sans};
+    --theme-font-size-smaller: #{$txt-2};
+    --theme-font-size-small: #{$txt-3};
+    --theme-font-size-medium: #{$txt-4};
+    --theme-font-size-larger: #{$txt-5};
+    --theme-line-height-small: #{$lh-2};
+    --theme-line-height-medium: #{$lh-3};
+}
+
+/*********************
+  Base HTML elements 
+**********************/
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+	src: url(./fonts/rubik-variable.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+	src: url(./fonts/rubik-variable-italic.ttf) format("truetype");
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: var(--theme-color-text, $grey-4);
+	font-family: var(--theme-font-family, $font-sans);
+    line-height: var(--theme-line-height-medium, $lh-3);
+	font-size: var(--theme-font-size-small, $txt-3);
+    @media screen and (min-width: $md){
+        font-size: var(--theme-font-size-medium, $txt-4);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+    line-height: var(--theme-line-height-small, $lh-2);
+	margin: 1.5em 0 .5em;
+}
+
+h1, .h1 {
+	font-size: $txt-8;
+	@media screen and (min-width: $lg){
+		font-size: $txt-9;
+	}
+	@media screen and (min-width: $xxl){
+		font-size: $txt-10;
+	}
+}
+
+h2, .h2 {
+	font-size: $txt-7;
+	@media screen and (min-width: $lg){
+		font-size: $txt-8;
+	}
+	@media screen and (min-width: $xxl){
+		font-size: $txt-9;
+	}
+}
+
+h3, .h3 {
+	font-size: $txt-6;
+	@media screen and (min-width: $lg){
+		font-size: $txt-7;
+	}
+	@media screen and (min-width: $xxl){
+		font-size: $txt-8;
+	}
+}
+
+h4, .h4 {
+	font-size: $txt-5;
+	@media screen and (min-width: $lg){
+		font-size: $txt-6;
+	}
+	@media screen and (min-width: $xxl){
+		font-size: $txt-7;
+	}
+}
+
+h5, .h5 {
+	font-size: $txt-5;
+	@media screen and (min-width: $xxl){
+		font-size: $txt-6;
+	}
+}
+
+h6, .h6 {
+	font-size: $txt-4;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: $sp-5;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: 4px solid var(--theme-color-accent, $orange-5);
+	margin: $sp-5 0;
+	padding: $sp-4;
+	p {
+		font-size: var(--theme-font-size-larger, $txt-5);
+	}
+	cite {
+		display: block;
+		text-align: right;
+	}
+}
+
+figure {
+	margin: 0 0 $sp-5;
+	max-width: 100%;
+}
+
+figcaption {
+	font-size: var(--theme-font-size-small);
+	font-style: italic;
+	margin-top: $sp-1;
+	text-align: center;
+}
+
+small,
+.small {
+	font-size: var(--theme-font-size-small);
+}
+.smaller {
+	font-size: var(--theme-font-size-smaller);
+}
+
+address {
+	margin: 0 0 $sp-5;
+}
+
+pre {
+	background: var(--theme-color-text);
+	color: var(--theme-color-text-lightest);
+	font-family: $font-mono;
+	line-height: $lh-2;
+	margin-bottom: $sp-5;
+	max-width: 100%;
+	overflow: auto;
+	padding: $sp-4;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font-mono;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted var(--theme-color-accent, $orange-5);
+	cursor: help;
+}
+
+mark,
+ins {
+	background: var(--theme-color-accent--lightest, $orange-1);
+	text-decoration: none;
+}
+
+q {
+	font-style: italic;
+}
+
+big {
+	font-size: 125%;
+}
+
+svg {
+	fill: currentColor;
+}
+
+.icon {
+	width: $txt-6;
+	height: $txt-6;
+}
+
+a {
+	color: var(--theme-color-link, $orange-5 );
+	transition: all .25s ease-in-out;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--theme-color-link-hover, $orange-3 );
+	}
+
+	&:focus {
+		outline: 2px dotted var(--theme-color-link-hover, $orange-3 );
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&.naked {
+		text-decoration: none;
+		&:hover,
+		&:focus,
+		&:active {
+			color: var(--theme-color-link-hover, $orange-3 );
+		}
+	}
+}
+
+ul,
+ol {
+	margin: $sp-5 0;
+	padding-left: $sp-7;
+}
+li {
+	margin-bottom: $sp-2;
+}
+
+ul {
+	list-style: disc;
+	&.naked {
+		list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+dl {
+	margin: $sp-5 0;
+}
+
+dt {
+	// display: inline-block;
+	font-weight: $fw-7;
+}
+
+dd {
+	// display: block;
+	padding-left: $sp-4;
+	p {
+		margin: 0;
+	}
+}
+
+hr {
+	margin: $sp-5 0;
+}
+
+label,
+.label {
+	color: var(--theme-color-text-light, $grey-3);
+	font-size: var(--theme-font-size-smaller, $txt-2);
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+
+input,
+textarea,
+select {
+	border: 1px solid $grey-2;
+	color: var(--theme-color-text-light, $grey-3);
+	font-size: var(--theme-font-size-small, $txt-3);
+	line-height: 1;
+	max-width: 100%;
+	padding: $sp-3 $sp-4;
+	&:focus {
+		color: var(--theme-color-text, $grey-5);
+		outline: 2px dotted var(--theme-color-link, $orange-5);
+	}
+}
+
+select {
+	background: transparent;
+}
+
+textarea {
+	width: 100%;
+}
+
+button,
+a.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.wp-block-button__link,
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--theme-color-link, $orange-5);
+	border: 2px solid var(--theme-color-link, $orange-5);
+	color: white;
+	display: inline-block;
+	font-size: var(--theme-font-size-small, $txt-3);
+	font-weight: bold;
+	letter-spacing: .5px;
+	line-height: 1.1;
+	padding: $sp-3 $sp-4;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .25s ease-in-out;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+		background-color: var(--theme-color-link-hover, $orange-4);
+		border-color: var(--theme-color-link-hover, $orange-4);
+	}
+	&:focus {
+		outline: 2px dotted var(--theme-color-link-hover, $orange-4);
+	}
+	&.naked {
+		background-color: transparent;
+		border: none;
+		color: var( --theme-color-text, $grey-5 );
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--theme-color-link-hover, $orange-4);
+		}
+	}
+	&.outline,
+	.is-style-outline & {
+		background-color: transparent;
+		color: var(--theme-color-link, $orange-5);
+		&:hover,
+		&:active,
+		&:focus {
+			color: var(--theme-color-link-hover, $orange-4);
+		}
+	}
+	.is-style-squared & {
+		border-radius: 0;
+	}
+}
+
+table {
+	border: 1px solid var(--theme-color-text-lightest);
+	border-collapse: collapse;
+	margin: $sp-5 0;
+}
+tfoot {
+	font-weight: bold;
+}
+th, td {
+	border: 1px solid var(--theme-color-text-lightest);
+	padding: $sp-1;
+}
+

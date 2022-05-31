@@ -1,0 +1,34 @@
+/*!
+Theme Name: Voyager
+Theme URI: http://wordpress.org/themes/voyager/
+Author: Vincent Dubroeucq
+Author URI: https://vincentdubroeucq.com
+Description: Theme used for "Développer Son Thème WordPress" course
+Version: 1.0.0
+Tested up to: 5.9.1
+Requires PHP: 7.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: voyager
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Voyager is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'base';
+@import 'utilities';
+@import 'alignments';
+@import 'blocks';
+@import 'header';
+@import 'content';
+@import 'comments';
+@import 'footer';
+@import 'widgets';
+@import 'plugins';

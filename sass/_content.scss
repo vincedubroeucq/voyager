@@ -1,0 +1,89 @@
+.site-main {
+    overflow-x: hidden;
+}
+
+.posts-grid {
+    grid-gap: $sp-4;
+    place-items: center;
+    @media screen and (min-width: $md){
+        grid-template-columns: repeat( auto-fill, minmax( 385px, 1fr ) );
+    }
+}
+
+.excerpt p {
+    margin-bottom: $sp-1;
+}
+
+.search-result {
+    .post-thumbnail {
+        flex-shrink: 0;
+    }
+    .post-summary {
+        flex: 1 1 300px;
+    }
+}
+
+.post-meta {
+    a {
+        color: inherit;
+    }
+}
+
+.post-format-icon {
+    background: rgba( $grey-5, .5);
+    color: $grey-1;
+    padding: $sp-2;
+    border-radius: 50%; 
+    bottom: $sp-2;
+    right: $sp-2;
+}
+
+.nav-links {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+    gap: $sp-1;
+}
+
+.page-links {
+    margin: $sp-5 0;
+}
+
+.post-navigation,
+.comment-navigation {
+    .nav-links {
+        justify-content: space-between;
+    }
+    .nav-next {
+        margin-left: auto;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+.page-numbers,
+.post-page-numbers {
+    border-bottom: 4px solid transparent;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    padding: $sp-1 $sp-2;
+    text-decoration: none;
+    min-width: 35px;
+    min-height: 35px;
+    &:focus,
+    &:hover,
+    &.current {
+        border-bottom-color: var(--theme-color-link)
+    }
+}
+
+.sticky {
+    border: 2px solid $orange-4;
+}
+
+.entry-footer {
+    clear: both;
+}
