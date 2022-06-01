@@ -109,7 +109,6 @@ function voyager_setup() {
 			'height'      => 50,
 			'width'       => 250,
 			'flex-width'  => true,
-			// 'flex-height' => true,
 			'header-text' => array( 'site-title' ),
 		)
 	);
@@ -251,7 +250,7 @@ function voyager_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'voyager' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s p-4">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="widget-title h4">',
 			'after_title'   => '</h2>',
 		)
 	);

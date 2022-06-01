@@ -2,8 +2,6 @@
 /**
  * Custom template tags for this theme
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
  * @package Voyager
  */
 
@@ -53,6 +51,7 @@ function voyager_hero_title( $echo = true ){
         $title = get_the_archive_title();
     }
     if( is_search() ){
+        /* translators: %s Search query */
         $title = sprintf( esc_html__( 'Search Results for: %s', 'voyager' ), '<span>' . get_search_query() . '</span>' );
     }
     if( is_404() ){

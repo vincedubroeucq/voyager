@@ -23,7 +23,7 @@ $display_search = (bool) get_theme_mod( 'voyager_display_search', true );
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'voyager' ); ?></a>
-    <header class="site-header relative centered-header">
+    <header class="site-header relative">
         <div class="wrapper header-wrapper flex flex-column h-100">
             <?php voyager_header_image(); ?>
             <?php get_template_part( 'template-parts/header', 'topbar' ); ?>
@@ -56,7 +56,7 @@ $display_search = (bool) get_theme_mod( 'voyager_display_search', true );
                                 ?>
                             </div>
                         </div>
-                    </nav><!-- #site-navigation -->
+                    </nav>
                 </div>
             </div>
             <?php get_template_part( 'template-parts/header', 'hero' ); ?>

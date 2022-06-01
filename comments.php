@@ -45,7 +45,7 @@ if ( post_password_required() ) {
                     )
                 );
 			?>
-		</ul><!-- .comment-list -->
+		</ul>
 
 		<?php
             the_comments_navigation(
@@ -60,9 +60,9 @@ if ( post_password_required() ) {
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'voyager' ); ?></p>
 		<?php endif;
 
-	endif; // Check for have_comments().
+	endif;
 
 	comment_form();
 	?>
 
-</div><!-- #comments -->
+</div>

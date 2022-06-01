@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-04-19T16:32:22+02:00\n"
+"POT-Creation-Date: 2022-06-01T10:19:16+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: voyager\n"
@@ -52,9 +52,10 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:5
-#: inc/customizer.php:97
-msgid "Theme by <a href=\"%s\">%s</a>"
+#. translators: %1$s author URL, %2$s Author name
+#: footer.php:6
+#: inc/customizer.php:98
+msgid "Theme by <a href=\"%1$s\">%2$s</a>"
 msgstr ""
 
 #: functions.php:55
@@ -70,71 +71,71 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:129
 msgid "Darkest grey"
 msgstr ""
 
-#: functions.php:135
+#: functions.php:134
 msgid "Dark grey"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:139
 msgid "Medium grey"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:144
 msgid "Light grey"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:149
 msgid "Lightest grey"
 msgstr ""
 
-#: functions.php:155
+#: functions.php:154
 msgid "Darkest orange"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:159
 msgid "Dark orange"
 msgstr ""
 
-#: functions.php:165
+#: functions.php:164
 msgid "Medium orange"
 msgstr ""
 
-#: functions.php:170
+#: functions.php:169
 msgid "Light orange"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:174
 msgid "Lightest orange"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:185
 msgid "Transparent to dark grey"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:196
 msgid "Small"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:201
 msgid "Regular"
 msgstr ""
 
-#: functions.php:207
+#: functions.php:206
 msgid "Large"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:211
 msgid "Very large"
 msgstr ""
 
-#: functions.php:249
+#: functions.php:248
 msgid "Footer widget area"
 msgstr ""
 
-#: functions.php:251
+#: functions.php:250
 msgid "Add widgets here."
 msgstr ""
 
@@ -175,28 +176,29 @@ msgstr ""
 msgid "Display search form in the navbar"
 msgstr ""
 
-#: inc/customizer.php:102
+#: inc/customizer.php:103
 msgid "Footer copyright text"
 msgstr ""
 
-#: inc/template-tags.php:56
+#. translators: %s Search query
+#: inc/template-tags.php:55
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/template-tags.php:59
+#: inc/template-tags.php:58
 msgid "Not found !"
 msgstr ""
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:111
 msgid "Published on: "
 msgstr ""
 
-#: inc/template-tags.php:115
+#: inc/template-tags.php:114
 msgid "Updated on: "
 msgstr ""
 
-#: inc/template-tags.php:132
-#: inc/template-tags.php:155
+#: inc/template-tags.php:131
+#: inc/template-tags.php:154
 msgid "Edit"
 msgstr ""
 
@@ -212,12 +214,12 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: template-parts/content-none.php:13
-msgid "Sorry, but we could not find what you are looking for. Can you maybe try a search ?"
+#: template-parts/content-none.php:9
+msgid "Sorry, but we could not find anything that matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:15
-msgid "Sorry, but we could not find anything that matched your search terms. Please try again with some different keywords."
+#: template-parts/content-none.php:9
+msgid "Sorry, but we could not find what you are looking for. Can you maybe try a search ?"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers

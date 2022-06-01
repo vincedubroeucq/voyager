@@ -17,7 +17,7 @@ get_header();
                 <div class="posts-list">
                     <?php 
                         while ( have_posts() ) : the_post();     
-                            get_template_part( 'template-parts/search-result' );
+                            get_template_part( 'template-parts/content-search' );
                         endwhile; 
                     ?>
                 </div>

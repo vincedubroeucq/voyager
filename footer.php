@@ -2,7 +2,8 @@
 /**
  * The default footer template
  */
-$footer_text = get_theme_mod( 'voyager_footer_text', sprintf( __( 'Theme by <a href="%s">%s</a>', 'voyager' ), 'https://vincentdubroeucq.com', 'Vincent Dubroeucq' ) );
+/* translators: %1$s author URL, %2$s Author name*/
+$footer_text = get_theme_mod( 'voyager_footer_text', sprintf( __( 'Theme by <a href="%1$s">%2$s</a>', 'voyager' ), 'https://vincentdubroeucq.com', 'Vincent Dubroeucq' ) );
 ?>
     <footer class="site-footer">
         <div class="wrapper footer-wrapper">

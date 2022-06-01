@@ -94,7 +94,8 @@ function voyager_customize_register( $wp_customize ) {
 	// Additional footer setting
 	$wp_customize->add_setting( 'voyager_footer_text', array(
 		'capability' => 'edit_theme_options',
-		'default'    => sprintf( __( 'Theme by <a href="%s">%s</a>', 'voyager' ), 'https://vincentdubroeucq.com', 'Vincent Dubroeucq' ),
+		/* translators: %1$s author URL, %2$s Author name*/
+		'default'    => sprintf( __( 'Theme by <a href="%1$s">%2$s</a>', 'voyager' ), 'https://vincentdubroeucq.com', 'Vincent Dubroeucq' ),
 		'transport'  => 'refresh',
 		'sanitize_callback' => 'wp_kses_post',
 	) );
