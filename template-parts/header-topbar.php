@@ -7,7 +7,7 @@
 ?>
 <?php if( has_nav_menu( 'menu-2' ) ) : ?>
     <div class="topbar relative">
-        <div class="wrapper flex flex-wrap align-center maxw-xxl mx-auto px-4 py-1">
+        <div class="wrapper flex flex-wrap align-center maxw-xxl mx-auto px-5 py-2">
             <nav class="navigation topbar-navigation ml-auto">
                 <?php 
                     wp_nav_menu( array(

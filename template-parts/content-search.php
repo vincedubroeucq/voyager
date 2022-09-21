@@ -9,8 +9,8 @@
 $permalink = get_permalink();
 ?>
 
-<article <?php post_class( 'search-result p-5 bg-grey-0 mb-5' ); ?>>
-    <div class="wrapper card-wrapper flex flex-wrap align-start">
+<article <?php post_class( 'search-result bg-grey-0 mb-5' ); ?>>
+    <div class="wrapper card-wrapper flex flex-wrap align-start p-5">
         <?php if( has_post_thumbnail() ) : ?>
             <a class="post-thumbnail block relative mr-5" href="<?php echo esc_url( $permalink ); ?>">
                 <?php 

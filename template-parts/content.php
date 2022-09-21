@@ -8,25 +8,23 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'p-5 bg-grey-0' ); ?>>
-	<div class="entry-content">
-	    <div class="wrapper entry-content-wrapper">
-            <?php
-                the_content(
-                    sprintf(
-                        /* translators: %s: Name of current post. Only visible to screen readers */
-                        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'voyager' ),
-                        wp_kses_post( get_the_title() )
-                    )
-                );
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'bg-grey-0' ); ?>>
+    <div class="wrapper entry-content p-5">
+        <?php
+            the_content(
+                sprintf(
+                    /* translators: %s: Name of current post. Only visible to screen readers */
+                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'voyager' ),
+                    wp_kses_post( get_the_title() )
+                )
+            );
 
-                wp_link_pages(
-                    array(
-                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager' ),
-                        'after'  => '</div>',
-                    )
-                );
-            ?>
-        </div>
-    </div><!-- .entry-content -->
+            wp_link_pages(
+                array(
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'voyager' ),
+                    'after'  => '</div>',
+                )
+            );
+        ?>
+    </div>
 </article>

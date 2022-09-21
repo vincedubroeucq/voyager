@@ -9,7 +9,7 @@ $footer_text = get_theme_mod( 'voyager_footer_text', sprintf( __( 'Theme by <a h
         <div class="wrapper footer-wrapper">
             <?php get_sidebar( 'sidebar-1' ); ?>
             <div class="site-info text-center bg-grey-5 grey-1">
-                <div class="wrapper site-info-wrapper flex-wrap align-center space-between maxw-xxl mx-auto px-4 py-1">
+                <div class="wrapper site-info-wrapper flex-wrap align-center space-between maxw-xxl mx-auto px-5 py-2">
                     <span class="copyright">
                         <?php echo wp_kses_post( $footer_text ); ?>
                     </span>
