@@ -8,7 +8,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'p-5 bg-grey-0' ); ?>>
 	<div class="entry-content">
 	    <div class="wrapper entry-content-wrapper">
             <?php

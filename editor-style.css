@@ -53,6 +53,10 @@
   font-display: swap;
   src: url(./fonts/rubik-variable-italic.ttf) format("truetype");
 }
+body {
+  background-color: #fafafa;
+}
+
 body,
 button,
 input,

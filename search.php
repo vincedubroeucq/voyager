@@ -13,7 +13,7 @@ get_header();
         
         <?php if ( have_posts() ) : ?>
 
-            <div class="wrapper main-wrapper maxw-lg mx-auto py-7 px-4">        
+            <div class="wrapper main-wrapper maxw-lg mx-auto py-7">        
                 <div class="posts-list">
                     <?php 
                         while ( have_posts() ) : the_post();     
@@ -33,7 +33,7 @@ get_header();
 
         <?php else : ?>
 
-            <div class="wrapper main-wrapper maxw-mlg mx-auto py-7 px-4">
+            <div class="wrapper main-wrapper maxw-mlg mx-auto py-7">
                 <?php get_template_part( 'template-parts/content', 'none' ); ?>
             </div>
             

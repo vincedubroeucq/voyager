@@ -9,10 +9,10 @@
 $permalink = get_permalink();
 ?>
 
-<article <?php post_class( 'search-result p-4' ); ?>>
+<article <?php post_class( 'search-result p-5 bg-grey-0 mb-5' ); ?>>
     <div class="wrapper card-wrapper flex flex-wrap align-start">
         <?php if( has_post_thumbnail() ) : ?>
-            <a class="post-thumbnail block relative mr-4" href="<?php echo esc_url( $permalink ); ?>">
+            <a class="post-thumbnail block relative mr-5" href="<?php echo esc_url( $permalink ); ?>">
                 <?php 
                     the_post_thumbnail( 'thumbnail' ); 
                     voyager_post_format_icon();

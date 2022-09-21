@@ -92,6 +92,10 @@ p, h1, h2, h3, h4, h5, h6 {
   font-display: swap;
   src: url(./fonts/rubik-variable-italic.ttf) format("truetype");
 }
+body {
+  background-color: #fafafa;
+}
+
 body,
 button,
 input,
@@ -1826,7 +1830,7 @@ pre.wp-block-verse {
 }
 
 .topbar {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(250, 250, 250, 0.8);
 }
 
 .navbar {
@@ -1970,11 +1974,10 @@ button.menu-overlay-toggle {
 
 .posts-grid {
   grid-gap: 1rem;
-  place-items: center;
 }
 @media screen and (min-width: 640px) {
   .posts-grid {
-    grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }
 
@@ -2002,8 +2005,15 @@ button.menu-overlay-toggle {
   right: 0.5rem;
 }
 
+.pagination,
+.post-navigation {
+  background-color: #fafafa;
+  padding: 1rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
 .nav-links {
-  align-items: flex-end;
   display: flex;
   justify-content: center;
   gap: 0.25rem;

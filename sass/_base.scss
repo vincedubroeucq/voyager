@@ -39,6 +39,10 @@
 	src: url(./fonts/rubik-variable-italic.ttf) format("truetype");
 }
 
+body {
+	background-color: $grey-0;
+}
+
 body,
 button,
 input,

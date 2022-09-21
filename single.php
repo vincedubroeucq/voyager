@@ -10,7 +10,7 @@
 get_header(); 
 ?>
     <main class="site-main">
-        <div class="wrapper main-wrapper maxw-mlg mx-auto py-7 px-4">
+        <div class="wrapper main-wrapper maxw-mlg mx-auto py-7">
             <?php 
                 if ( have_posts() ) :  
                     while ( have_posts() ) : 

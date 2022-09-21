@@ -4,9 +4,8 @@
 
 .posts-grid {
     grid-gap: $sp-4;
-    place-items: center;
     @media screen and (min-width: $md){
-        grid-template-columns: repeat( auto-fill, minmax( 385px, 1fr ) );
+        grid-template-columns: repeat( auto-fill, minmax( 400px, 1fr ) );
     }
 }
 
@@ -38,8 +37,16 @@
     right: $sp-2;
 }
 
+.pagination,
+.post-navigation {
+    background-color: $grey-0;
+    padding: $sp-4;
+    text-align: center;
+    margin: $sp-5 0;
+}
+
 .nav-links {
-    align-items: flex-end;
+    // align-items: flex-end;
     display: flex;
     justify-content: center;
     gap: $sp-1;
