@@ -9,7 +9,7 @@
 $permalink = get_permalink();
 ?>
 
-<article <?php post_class( 'card maxw-sm bg-grey-0' ); ?>>
+<article <?php post_class( 'card maxw-sm mx-auto bg-grey-0' ); ?>>
     <div class="wrapper card-wrapper p-5">
         <?php if( has_post_thumbnail() ) : ?>
             <a class="post-thumbnail block relative" href="<?php echo esc_url( $permalink ); ?>">
