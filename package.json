@@ -19,7 +19,7 @@
     "terser": "terser js/navigation.min.js -o js/navigation.min.js",
     "make-pot": "wp i18n make-pot . languages/voyager.pot",
     "css:build": "npm run style:build & npm run editor-style:build & npm run woocommerce-style:build",
-    "js:build": "npm run babel & npm run terser",
+    "js:build": "npm run babel && npm run terser",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vincent Dubroeucq",
