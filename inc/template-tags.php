@@ -104,7 +104,7 @@ if( ! function_exists( 'voyager_post_meta' ) ) :
  * @return  string  $html  Page description HTML
  */
 function voyager_post_meta( $echo = true ){
-    $html  = '';
+    $html = '';
     $meta = array();
 
     $time   = sprintf( '<time class="entry-date published" datetime="%s">%s</time>', esc_attr( get_the_date( DATE_W3C ) ), esc_html( get_the_date() ) );
@@ -113,22 +113,18 @@ function voyager_post_meta( $echo = true ){
         $time   = sprintf( '<time class="entry-date updated" datetime="%s">%s</time>', esc_attr( get_the_modified_date( DATE_W3C ) ), esc_html( get_the_modified_date() ) );
         $prefix = sprintf( '<span class="screen-reader-text">%s</span>', __( 'Updated on: ', 'voyager' ) );
     }
-    $time_string = sprintf( '<span class="date">%s%s</span>', $prefix, $time );
-    $meta[]     = $time_string;
+    $meta[] = sprintf( '<span class="meta date">%s%s</span>', $prefix, $time );
 
     $categories = get_the_category();
     if( ! empty( $categories ) ){
-        $items = array();
         foreach ( $categories as $category ) {
-            $items[] = sprintf( '<li class="mb-0"><a class="naked" href="%s">%s</a></li>', esc_url( get_category_link( $category->term_id ) ), esc_html( $category->name ) ); 
+            $meta[] = sprintf( '<span class="meta category mb-0"><a class="naked" href="%s">%s</a></span>', esc_url( get_category_link( $category->term_id ) ), esc_html( $category->name ) ); 
         }
-        $list    = sprintf( '<ul class="card-categories naked inline-flex flex-wrap">%s</ul>', join( '<span class="seperator mx-1">|</span>', $items ) );
-        $meta[] = $list;
     }
 
     $edit_link = get_edit_post_link();
     if( $edit_link ){
-        $meta[] = sprintf( '<a href="%s" class="post-edit-link naked">%s</a>', $edit_link, __( 'Edit', 'voyager' ) );
+        $meta[] = sprintf( '<span class="meta edit-link"><a href="%s" class="post-edit-link naked">%s</a></span>', $edit_link, __( 'Edit', 'voyager' ) );
     }
 
     $meta = apply_filters( 'voyager_post_meta', $meta );
