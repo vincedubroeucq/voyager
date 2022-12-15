@@ -11,13 +11,8 @@ Requires PHP: 7.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: voyager
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-Voyager is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Domain Path: /languages
+Tags: grid-layout, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, editor-styles, featured-image-header, footer-widgets, theme-options, block-styles, wide-blocks
 */
 *,
 *::before,
@@ -1851,6 +1846,9 @@ button.menu-overlay-toggle {
 .main-navigation .menu-item a:hover, .main-navigation .menu-item a:focus {
   border-color: var(--theme-color-link-hover);
 }
+.main-navigation .search-form {
+  justify-content: center;
+}
 
 .overlay {
   background: rgba(20, 20, 18, 0.95);
@@ -1974,6 +1972,7 @@ button.menu-overlay-toggle {
 
 .posts-grid {
   grid-gap: 1rem;
+  justify-items: center;
 }
 @media screen and (min-width: 640px) {
   .posts-grid {
@@ -2131,7 +2130,7 @@ button.menu-overlay-toggle {
 }
 @media screen and (min-width: 640px) {
   .widget-area-wrapper.grid {
-    grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }
 
