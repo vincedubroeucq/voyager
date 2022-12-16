@@ -29,6 +29,7 @@ get_header();
 
                 <?php 
                     the_posts_pagination( array(
+                        'class' => 'pagination',
                         'prev_text' => sprintf( '%s<span class="screen-reader-text">%s</span>', voyager_icon( 'previous', false ), _x( 'Previous', 'previous set of posts' ) ),
                         'next_text' => sprintf( '<span class="screen-reader-text">%s</span>%s' , _x( 'Next', 'next set of posts' ), voyager_icon( 'next', false ) ), 
                     ) ); 
