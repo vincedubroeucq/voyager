@@ -12,12 +12,12 @@ $permalink = get_permalink();
 <article <?php post_class( 'card maxw-sm mx-auto bg-grey-0' ); ?>>
     <div class="wrapper card-wrapper p-5">
         <?php if( has_post_thumbnail() ) : ?>
-            <a class="post-thumbnail block relative" href="<?php echo esc_url( $permalink ); ?>">
-                <?php 
-                    the_post_thumbnail( 'medium' ); 
-                    voyager_post_format_icon();
-                ?>
-            </a>
+            <div class="wrapper post-thumbnail-wrapper relative">
+                <a class="post-thumbnail block" href="<?php echo esc_url( $permalink ); ?>">
+                    <?php the_post_thumbnail( 'medium' ); ?>
+                </a>
+                <?php voyager_post_format_icon(); ?>
+            </div>
         <?php endif; ?>
         <div class="post-summary">
             <h2 class="entry-title txt-6 mt-3 mb-1">

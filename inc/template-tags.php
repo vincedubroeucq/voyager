@@ -160,16 +160,16 @@ endif;
 
 
 if( ! function_exists( 'voyager_post_format_icon' ) ) :
-/**
- * Displays optional post format icon on cards
- */
+    /**
+     * Displays optional post format icon on cards
+     */
 function voyager_post_format_icon( $echo = true ){
     $html   = '';
     $format = get_post_format();
     $icon   = voyager_icon( sanitize_title( $format ), false );
-    
+    $url    = get_post_format_link( $format );
     if( $format && $icon  ){
-        $html = sprintf( '<div class="post-format-icon absolute flex flex-column flex-center align-center">%s<span class="post-format-label screen-reader-text">%s</span></div>', $icon, esc_html( get_post_format_string( $format ) ) );
+        $html = sprintf( '<a href="%s" class="post-format-icon absolute flex flex-center align-center">%s<span class="post-format-label screen-reader-text">%s</span></a>', esc_url( $url ), $icon, esc_html( get_post_format_string( $format ) ) );
     }
 
     $html = apply_filters( 'voyager_post_format_icon', $html );
