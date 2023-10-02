@@ -79,9 +79,6 @@ function voyager_hero_description( $echo = true ){
     if( is_single() ){
         $description = voyager_post_meta( false );
     }
-    if( is_archive() ){
-        $description = '';
-    }
     if( is_front_page() && is_home() ){
         $description = get_bloginfo( 'description' );
     }
@@ -150,7 +147,7 @@ function voyager_page_footer( $echo = true ){
     $edit_link = ! empty( $link = get_edit_post_link() ) ? sprintf( '<a href="%s" class="post-edit-link naked">%s</a>', $link, __( 'Edit', 'voyager' ) ) : '';
     
     $html = sprintf( '<div class="page-footer uppercase txt-2">%s<span class="seperator mx-1">|</span>%s%s</div>', $time_string, $list, $edit_link );
-    $html = apply_filters( 'voyager_post_meta', $html );
+    $html = apply_filters( 'voyager_page_footer', $html );
     if( $echo ) {
         echo $html;
     }

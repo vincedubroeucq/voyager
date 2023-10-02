@@ -61,6 +61,10 @@ button.menu-overlay-toggle {
     }
 }
 
+.primary-submenu {
+  font-size: smaller;
+}
+
 .header-image-container {
     z-index: -1;
 }
@@ -72,7 +76,7 @@ button.menu-overlay-toggle {
 }
 
 .title-border {
-    border: 2px solid #fff;
+    border: 2px solid;
     display: inline-block;
     width: 75px;
 }
@@ -120,28 +124,30 @@ button.menu-overlay-toggle {
     .page_item {
         margin-left: $sp-3;
     }
-    .primary-submenu {
-        background-color:rgba( $grey-5, .90 );
-        display: none;
-        padding: $sp-5;
-        position: absolute;
-        .menu-item, 
-        .page_item {
-            margin-right: $sp-3;
-            margin-top: 0;
-        }
-    }
     .primary-menu {
         .menu-item, 
         .page_item {
-            margin-bottom: $sp-3;
-            margin-top: $sp-3;
             &:hover,
             &:focus-within {
                 .primary-submenu {
                     display: block;
                 }
             }
+        }
+    }
+    .primary-submenu {
+        background-color: rgba( $grey-5, .90 );
+        display: none;
+        padding: $sp-5;
+        position: absolute;
+        min-width: max-content;
+        .menu-item, 
+        .page_item {
+            margin: 0 $sp-2;
+        }
+        .primary-submenu {
+            display: block;
+            position: static;
         }
     }
     .title-block {
