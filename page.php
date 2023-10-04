@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-    <main class="site-main">
+    <main id="primary" class="site-main">
         <div class="wrapper main-wrapper maxw-mlg mx-auto py-7">
             <?php 
                 if ( have_posts() ) :  
