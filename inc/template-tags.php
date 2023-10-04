@@ -135,25 +135,37 @@ function voyager_post_meta( $echo = true ){
 endif;
 
 
-if( ! function_exists( 'voyager_page_footer' ) ) :
-/**
- * Displays page footer
- * 
- * @param   bool    $echo  Echo or not.
- * @return  string  $html  Page description HTML
- */
-function voyager_page_footer( $echo = true ){
-    $html = '';
-    $edit_link = ! empty( $link = get_edit_post_link() ) ? sprintf( '<a href="%s" class="post-edit-link naked">%s</a>', $link, __( 'Edit', 'voyager' ) ) : '';
+if( ! function_exists( 'voyager_post_footer' ) ) :
+    /**
+     * Displays post footer, with tags and edit link.
+     * 
+     * @param   bool    $echo  Echo or not.
+     * @return  string  $html  Page description HTML
+     */
+    function voyager_post_footer( $echo = true ){
+        $html = '';
+        $meta = [];
     
-    $html = sprintf( '<div class="page-footer uppercase txt-2">%s<span class="seperator mx-1">|</span>%s%s</div>', $time_string, $list, $edit_link );
-    $html = apply_filters( 'voyager_page_footer', $html );
-    if( $echo ) {
-        echo $html;
+        $tags = get_the_tags();
+        if( ! empty( $tags ) ){
+            foreach ( $tags as $tag ) {
+                $meta[] = sprintf( '<span class="meta tag mb-0"><a class="naked" href="%s">%s</a></span>', esc_url( get_tag_link( $tag->term_id ) ), esc_html( $tag->name ) ); 
+            }
+        }
+    
+        $edit_link = get_edit_post_link();
+        if( $edit_link ){
+            $meta[] = sprintf( '<span class="meta edit-link"><a href="%s" class="post-edit-link naked">%s</a></span>', $edit_link, __( 'Edit', 'voyager' ) );
+        }
+    
+        $html = sprintf( '<footer class="post-footer uppercase txt-2 flex flex-wrap flex-end">%s</footer>', join( '<span class="seperator mx-1">|</span>', $meta ) );
+        $html = apply_filters( 'voyager_post_footer', $html );
+        if( $echo ) {
+            echo $html;
+        }
+        return $html;
     }
-    return $html;
-}
-endif;
+    endif;
 
 
 if( ! function_exists( 'voyager_post_format_icon' ) ) :

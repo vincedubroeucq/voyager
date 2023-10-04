@@ -28,3 +28,12 @@
 .gallery-caption {
 	display: block;
 }
+
+.wp-caption {
+	margin-bottom: $sp-1;
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	text-align: center;
+}

@@ -19,6 +19,10 @@
                     'after'  => '</div>',
                 )
             );
+
+            if( 'post' === get_post_type() ) {
+                voyager_post_footer(); 
+            }
         ?>
     </div>
 </article>
