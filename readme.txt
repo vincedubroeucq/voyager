@@ -1,4 +1,4 @@
-=== Theme Name ===
+=== Voyager ===
 Contributors: vincentdubroeucq
 Requires at least: 5.0
 Tested up to: 6.3
@@ -66,9 +66,6 @@ No, this is a simple example of a classic theme. Use it as an example for buildi
 
 = 1.0 =
 * Initial release
-
-= 1.1 =
-* Added this cool new feature : 
 
 == Resources ==
 * Rubik font face, from https://fonts.google.com/, (c) Google, SIL Open Font License, Version 1.1
